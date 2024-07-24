@@ -1,9 +1,9 @@
 function generateComputerChoice() {
   const randomChoice = Math.random() * 3;
   if (randomChoice <= 1) {
-    return "✊"; // Rock
+    return "✊🏻"; // Rock
   } else if (randomChoice <= 2) {
-    return "✋"; // Paper
+    return "🖐🏻"; // Paper
   } else {
     return "✌"; // Scissors
   }
@@ -60,7 +60,9 @@ function generateResult(userChoice, computerChoice) {
 
 function showResult(userChoice, computerChoice, result) {
   document.querySelector("#user-move").innerText = `You chose: ${userChoice}`;
-  document.querySelector("#computer-move").innerText = `Computer chose: ${computerChoice}`;
+  document.querySelector(
+    "#computer-move"
+  ).innerText = `Computer chose: ${computerChoice}`;
   document.querySelector("#result").innerText = result;
   document.querySelector("#score").innerText = score.displayScore();
 }
