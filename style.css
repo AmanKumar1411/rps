@@ -1,5 +1,10 @@
+:root{
+  --font-style: Arial;
+}
+
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: var(--font-style);
   text-align: center;
   margin: 0;
   padding: 0;
@@ -52,4 +57,7 @@ h3 {
   body{
     width: fit-content;
   }
+}
+.result{
+  padding-top: 2rem;
 }
