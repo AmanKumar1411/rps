@@ -5,7 +5,7 @@ function generateComputerChoice() {
   } else if (randomChoice <= 2) {
     return "🖐🏻"; // Paper
   } else {
-    return "✌"; // Scissors
+    return "✌🏻"; // Scissors
   }
 }
 
