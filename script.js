@@ -31,27 +31,27 @@ function generateResult(userChoice, computerChoice) {
     return "It's a tie!";
   }
 
-  if (userChoice === "✊") {
-    if (computerChoice === "✋") {
+  if (userChoice === "✊🏻") {
+    if (computerChoice === "🖐🏻") {
       score.loss += 1;
       return "Computer Wins!";
-    } else if (computerChoice === "✌") {
+    } else if (computerChoice === "🖐🏻") {
       score.win += 1;
       return "User Wins!";
     }
-  } else if (userChoice === "✋") {
-    if (computerChoice === "✊") {
+  } else if (userChoice === "🖐🏻") {
+    if (computerChoice === "✊🏻") {
       score.win += 1;
       return "User Wins!";
-    } else if (computerChoice === "✌") {
+    } else if (computerChoice === "🖐🏻") {
       score.loss += 1;
       return "Computer Wins!";
     }
-  } else if (userChoice === "✌") {
-    if (computerChoice === "✊") {
+  } else if (userChoice === "🖐🏻") {
+    if (computerChoice === "✊🏻") {
       score.loss += 1;
       return "Computer Wins!";
-    } else if (computerChoice === "✋") {
+    } else if (computerChoice === "🖐🏻") {
       score.win += 1;
       return "User Wins!";
     }
