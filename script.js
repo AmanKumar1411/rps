@@ -1,8 +1,8 @@
 function generateComputerChoice() {
   const randomChoice = Math.random() * 3;
-  if (randomChoice <= 1) {
+  if (randomChoice < 1) {
     return "✊🏻"; // Rock
-  } else if (randomChoice <= 2) {
+  } else if (randomChoice < 2) {
     return "🖐🏻"; // Paper
   } else {
     return "✌🏻"; // Scissors
@@ -35,23 +35,23 @@ function generateResult(userChoice, computerChoice) {
     if (computerChoice === "🖐🏻") {
       score.loss += 1;
       return "Computer Wins!";
-    } else if (computerChoice === "🖐🏻") {
+    } else {
       score.win += 1;
       return "User Wins!";
     }
   } else if (userChoice === "🖐🏻") {
-    if (computerChoice === "✊🏻") {
+    if (computerChoice === "✌🏻") {
+      score.loss += 1;
+      return "Computer Wins!";
+    } else {
       score.win += 1;
       return "User Wins!";
-    } else if (computerChoice === "🖐🏻") {
-      score.loss += 1;
-      return "Computer Wins!";
     }
-  } else if (userChoice === "🖐🏻") {
+  } else if (userChoice === "✌🏻") {
     if (computerChoice === "✊🏻") {
       score.loss += 1;
       return "Computer Wins!";
-    } else if (computerChoice === "🖐🏻") {
+    } else {
       score.win += 1;
       return "User Wins!";
     }
@@ -76,6 +76,7 @@ document.querySelectorAll(".selection").forEach((button) => {
     showResult(userChoice, computerChoice, resultMessage);
   });
 });
+
 let reset = document.querySelector(".resetbtn");
 reset.addEventListener("click", () => {
   score = {
